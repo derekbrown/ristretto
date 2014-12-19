@@ -14,7 +14,7 @@ var app = new EmberApp({
 });
 
 // Use this to add additional libraries to the generated output files.
-app.import('vendor/ember-data/ember-data.js');
+app.import('vendor/ember-data/ember-data.js', {'ember-data': ['default']});
 
 // If the library that you are including contains AMD or ES6 modules that
 // you would like to import into your application please specify an
