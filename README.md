@@ -1,7 +1,7 @@
 #Ristretto
 
 ##What is Ristretto?
-Ristretto is the front-end component to Knotis, an asynchronous messaging platform. Built in Ember (with Ember-CLI) and using SASS/Bourbon/Neat/Bitters, Ristretto is the epitome of the front-end workflow. Directions for getting Ristretto up and running are below.
+Ristretto is the front-end component to [Knotis](http://knot.is), an asynchronous messaging platform. Built in Ember (with Ember-CLI) and using SASS/Bourbon/Neat/Bitters, Ristretto is the epitome of the front-end workflow. Directions for getting Ristretto up and running are below.
 
 ##How do I get Ristretto running locally?
 1. Be sure you have [NPM](http://www.npmjs.com) installed.
