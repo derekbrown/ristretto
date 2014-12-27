@@ -1,6 +1,6 @@
 <h3>Messages</h3>
 <ul>
-  {{#each}}
-    <li>{{subject}}</li>
+  {{#each message in model}}
+    <li>{{message.subject}}</li>
   {{/each}}
 </ul>

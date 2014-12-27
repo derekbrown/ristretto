@@ -1,9 +1,12 @@
+import Ember from 'ember';
+import config from './config/environment';
+
 var Router = Ember.Router.extend({
-  location: ENV.locationType
+  location: config.locationType
 });
 
 Router.map(function() {
-  this.route('messages');
+  this.resource('messages');
 });
 
 export default Router;

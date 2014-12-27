@@ -1,10 +1,16 @@
+/* jshint node: true */
+
 module.exports = function(environment) {
   var ENV = {
+    modulePrefix: 'ristretto',
+    environment: environment,
     baseURL: '/',
     locationType: 'auto',
-    FEATURES: {
-      // Here you can enable experimental features on an ember canary build
-      // e.g. 'with-controller': true
+    EmberENV: {
+      FEATURES: {
+        // Here you can enable experimental features on an ember canary build
+        // e.g. 'with-controller': true
+      }
     },
 
     APP: {
@@ -14,15 +20,33 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    // LOG_MODULE_RESOLVER is needed for pre-1.6.0
-    ENV.LOG_MODULE_RESOLVER = true;
-
-    ENV.APP.LOG_RESOLVER = true;
+    // ENV.APP.LOG_RESOLVER = true;
     ENV.APP.LOG_ACTIVE_GENERATION = true;
-    ENV.APP.LOG_MODULE_RESOLVER = true;
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.contentSecurityPolicy = {
+    'default-src': "'self' 'unsafe-inline'",
+    'script-src': "'self' 'self' 'unsafe-eval' 'unsafe-inline' http://ristretto.dev:35729",
+    'font-src': "'self'",
+    'connect-src': "'self' http://flatwhite.dev:9000 ws://ristretto.dev:35729",
+    'img-src': "'self'",
+    'style-src': "'self' 'unsafe-inline'",
+    'media-src': "'self'"
+    }
+
+  }
+
+  if (environment === 'test') {
+    // Testem prefers this...
+    ENV.baseURL = '/';
+    ENV.locationType = 'none';
+
+    // keep test console output quieter
+    ENV.APP.LOG_ACTIVE_GENERATION = false;
+    ENV.APP.LOG_VIEW_LOOKUPS = false;
+
+    ENV.APP.rootElement = '#ember-testing';
   }
 
   if (environment === 'production') {

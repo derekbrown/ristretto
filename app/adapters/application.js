@@ -1,18 +1,20 @@
+import DS from 'ember-data';
+import Ember from 'ember';
+
 export default DS.RESTAdapter.extend({
   host: "http://flatwhite.dev:9000",
 });
 
-// export default DS.RESTSerializer.extend({
-//   primaryKey: "id.$oid"
-// });
+export default DS.RESTSerializer.extend({
+  primaryKey: "_id"
+});
 
 export default DS.Adapter.extend({
-  findAll: function(store, type, sinceToken) {
+  findAll: function(store, type) {
     var url = "http://flatwhite.dev:9000/messages";
-    var query = {since: sinceToken};
     return new Ember.RSVP.Promise(function (resolve, reject) {
-      $.getJSON(url, query).then(function(data) {
-        Ember.run(null, resolve, data.messages);
+      jQuery.getJSON(url).then(function(data) {
+        Ember.run(null, resolve, data);
       }, function (jqXHR) {
         jqXHR.then = null;
         Ember.run(null, reject, jqXHR);
