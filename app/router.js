@@ -6,7 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('messages');
+  this.route('messages');
 });
 
 export default Router;
