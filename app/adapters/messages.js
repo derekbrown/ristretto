@@ -2,7 +2,7 @@ import DS from 'ember-data';
 import Ember from 'ember';
 
 export default DS.Adapter.extend({
-  findAll: function(store, type) {
+  findAll: function() {
     var url = "http://flatwhite.dev:9000/messages";
     return new Ember.RSVP.Promise(function (resolve, reject) {
       jQuery.getJSON(url).then(function(data) {
