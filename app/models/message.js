@@ -4,7 +4,8 @@ var message = DS.Model.extend({
   subject: DS.attr('string'),
   sender: DS.attr('string'),
   participants: DS.attr(),
-  messageText: DS.attr()
+  messageText: DS.attr(),
+  _id: DS.attr()
 });
 
 export default message;

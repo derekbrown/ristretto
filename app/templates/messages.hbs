@@ -1,6 +1,10 @@
 <h3>Messages</h3>
-<ul>
-  {{#each message in model}}
-    <li>{{message.subject}}</li>
-  {{/each}}
-</ul>
+{{ember-table
+  hasHeader=true
+  hasFooter=false
+  numFixedColumns=0
+  enableContentSelection=true
+  columnsBinding="columns"
+  contentBinding="model"
+  forceFillColumns=true
+}}

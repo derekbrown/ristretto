@@ -1,6 +1,10 @@
 <h3>Users</h3>
-<ul>
-  {{#each user in model}}
-    <li>{{user.userName}}</li>
-  {{/each}}
-</ul>
+{{ember-table
+  hasHeader=true
+  hasFooter=false
+  numFixedColumns=0
+  enableContentSelection=true
+  forceFillColumns=true
+  columnsBinding="columns"
+  contentBinding="model"
+}}
