@@ -32,6 +32,7 @@
     "ember-export-application-global": "^1.0.0",
     "ember-table": "git://github.com/derekbrown/ember-table-addon.git",
     "express": "^4.8.5",
-    "glob": "^4.0.5"
+    "glob": "^4.0.5",
+    "torii": "^0.2.2"
   }
 }
