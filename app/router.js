@@ -6,7 +6,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('messages');
+  this.resource('messages', {path: '/messages'}, function () {
+    this.route('from', {path: 'from/:sender'});
+    this.route('with', {path: 'with/:participant'});
+  });
   this.route('users');
 });
 
