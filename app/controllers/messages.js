@@ -21,9 +21,9 @@ var MessagesController = Ember.ArrayController.extend({
 
     var senderCol = Ember.Table.ColumnDefinition.create({
       headerCellName: 'Sender',
-      contentPath: '_data.sender',
+      contentPath: '_data.sender.userName',
       getCellContent: function(row) {
-        return row.get('sender').toString();
+        return row.get('sender.userName').toString();
       }
     });
 
@@ -33,7 +33,7 @@ var MessagesController = Ember.ArrayController.extend({
       getCellContent: function(row) {
         var total = '';
         _(row.get('participants')).each(function (participantEntry) {
-          var participantID = participantEntry['$oid'].toString();
+          var participantID = participantEntry['userName'].toString();
           total += participantID + ', ';
         });
         return total.slice(0,-2);

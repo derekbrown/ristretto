@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   actions: {
-    socialSignin: function (provider) {
+    social: function (provider) {
       var controller = this.controller;
       controller.set('error', null);
       controller.set('authData', null);
