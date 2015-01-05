@@ -33,6 +33,9 @@
     "ember-table": "git://github.com/derekbrown/ember-table-addon.git",
     "express": "^4.8.5",
     "glob": "^4.0.5",
-    "torii": "^0.2.2"
+    "torii": "^0.2.2",
+    "ember-cli-sass": "~3.0.3",
+    "broccoli-sass": "~0.3.3",
+    "ember-cli-bourbon": "0.0.5"
   }
 }
