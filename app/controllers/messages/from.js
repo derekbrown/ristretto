@@ -5,9 +5,9 @@ var MessagesFromController = Ember.Controller.extend({
   columns: function() {
     var idCol = Ember.Table.ColumnDefinition.create({
       headerCellName: 'ID',
-      contentPath: '_data._id.$oid',
+      contentPath: '_data.id',
       getCellContent: function(row) {
-        return row.get('_id.$oid').toString();
+        return row.get('id').toString();
       }
     });
 
