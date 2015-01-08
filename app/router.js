@@ -11,7 +11,6 @@ Router.map(function() {
     this.route('with', {path: 'with/:participant'});
   });
   this.route('users');
-  this.route('messages/from');
 });
 
 export default Router;
