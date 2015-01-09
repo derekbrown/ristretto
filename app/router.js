@@ -11,6 +11,7 @@ Router.map(function() {
     this.route('with', {path: 'with/:participant'});
   });
   this.route('users');
+  this.route('login');
 });
 
 export default Router;

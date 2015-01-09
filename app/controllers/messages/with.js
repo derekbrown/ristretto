@@ -22,6 +22,7 @@ var MessagesWithController = Ember.Controller.extend({
     var senderCol = Ember.Table.ColumnDefinition.create({
       headerCellName: 'Sender',
       contentPath: '_data.sender.userName',
+      // tableCellViewClass: 'userNameTableCellView',
       getCellContent: function(row) {
         return row.get('sender.userName').toString();
       }
@@ -30,6 +31,7 @@ var MessagesWithController = Ember.Controller.extend({
     var participantsCol = Ember.Table.ColumnDefinition.create({
       headerCellName: 'Participants',
       contentPath: '_data.participants',
+      // tableCellViewClass: 'App.userNameTableCell',
       getCellContent: function(row) {
         var total = '';
         _(row.get('participants')).each(function (participantEntry) {
