@@ -19,13 +19,13 @@ export default Ember.Controller.extend({
 
       request = Ember.$.post("http://flatwhite.dev:9000/login", this.getProperties("username", "password"));
 
-      request.then(this.loginSuccess.bind(this), this.loginFailure.bind(this));
+      request.then(this.loginSuccess(this.get('username')).bind(this), this.loginFailure.bind(this));
     }
   },
 
-  loginSuccess: function() {
+  loginSuccess: function(un) {
     this.reset();
-    document.location = "/messages/with/redswan29";
+    document.location = "/messages/with/" + un;
   },
 
   loginFailure: function() {
