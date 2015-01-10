@@ -15,6 +15,7 @@
     "qunit": "~1.15.0",
     "ember-table": "~0.2.4",
     "lodash": "^2.4.0",
-    "bourbon": "3.2.1"
+    "bourbon": "3.2.1",
+    "classie": "~1.0.1"
   }
 }

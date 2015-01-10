@@ -16,14 +16,6 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    },
-
-    torii: {
-      providers: {
-        'facebook-connect': {
-          appId: '1581344312096651'
-        }
-      }
     }
 
   };
@@ -36,11 +28,11 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = true;
     ENV.contentSecurityPolicy = {
     'default-src': "'self' 'unsafe-inline'",
-    'script-src': "'self' 'self' 'unsafe-eval' 'unsafe-inline' http://ristretto.dev:35729",
-    'font-src': "'self'",
+    'script-src': "'self' 'unsafe-eval' 'unsafe-inline' http://ristretto.dev:35729 ",
+    'font-src': "'self' http://fonts.gstatic.com",
     'connect-src': "'self' http://flatwhite.dev:9000 ws://ristretto.dev:35729",
     'img-src': "'self'",
-    'style-src': "'self' 'unsafe-inline'",
+    'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com",
     'media-src': "'self'"
     }
 

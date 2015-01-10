@@ -1,1 +1,11 @@
-@import "bourbon";
+@import "reset";
+@import "variables";
+@import "inputReset";
+@import "textInput";
+
+body {
+  background: $lightPrimaryColor;
+  color: $textPrimaryColor !important;
+  font-family: 'Open Sans', 'Helvetica', 'Arial', 'sans-serif';
+  font-size: 1.05em;
+}
