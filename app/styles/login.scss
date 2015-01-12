@@ -46,6 +46,7 @@
   opacity: 0;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
 }
 
 .form-label {
@@ -62,7 +63,7 @@
   left: 0;
   width: 100%;
   height: 4em;
-  background: $primaryColor;
+  background: $actionColor;
   -webkit-transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
   transform: perspective(1000px) rotate3d(1, 0, 0, 90deg);
   -webkit-transform-origin: 50% 100%;
@@ -119,7 +120,7 @@
   border: none;
   display: inline-block;
   font-weight: bold;
-  margin: 20px 12px 0px;
+  margin: 20px 9px 0px;
   padding: 0.3em 0.5em;
   position: relative;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
@@ -150,7 +151,7 @@
   right: -20px;
 }
 
-.form-button:first-of-type:before {
+.form-button:first-of-type:before, .form-button:last-of-type:after {
   border: none;
 }
 
