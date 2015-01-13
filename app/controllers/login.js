@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  loginErrorMessage: "Invalid username or password.",
   isProcessing: false,
   loginFailed: false,
   isSlowConnection: false,
@@ -18,8 +19,10 @@ export default Ember.Controller.extend({
       this.set("timeout", setTimeout(this.slowConnection.bind(this), 5000));
 
       request = Ember.$.post("http://flatwhite.dev:9000/login", this.getProperties("username", "password"));
-
-      request.then(this.loginFailure(this.get('username')).bind(this), this.loginFailure(this.get('username')).bind(this));
+      request.then(
+        this.loginSuccess(this.get('username')).bind(this),
+        this.loginFailure(error).bind(this)
+      );
     }
   },
 
@@ -28,8 +31,9 @@ export default Ember.Controller.extend({
     document.location = "/messages/with/" + un;
   },
 
-  loginFailure: function(un) {
+  loginFailure: function(error) {
     this.reset();
+    this.set("loginErrorMessage", "Invalid username or password.");
     this.set("loginFailed", true);
   },
 
