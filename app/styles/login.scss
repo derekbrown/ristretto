@@ -1,33 +1,44 @@
 .content > h2{
-  background: $accentColor;
-  color: $textOnDarkPrimaryColor;
   display:inline-block;
   margin-bottom: 10px;
   margin-left: -10px;
   padding: 0px 10px;
   position:relative;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
 }
 
-.content > h2:after,
-.content > h2:before{
-    content: '';
-    width: 0px;
-    height: 0px;
-    top: 0px;
-    position: absolute;
-}
-.content > h2:after {
-    border-top: 41px solid transparent;
-    border-left: 20px solid $accentColor;
-    right: -20px;
-}
-
+// .content > h2:after,
 // .content > h2:before{
-//     border-bottom: 41px solid transparent;
-//     border-right: 20px solid $accentColor;
-//     left: -20px;
+//     content: '';
+//     width: 0px;
+//     height: 0px;
+//     top: 0px;
+//     position: absolute;
 // }
+// .content > h2:after {
+//     border-top: 41px solid transparent;
+//     border-left: 20px solid $accentColor;
+//     right: -20px;
+// }
+
+.form-error {
+  background: $errorColor;
+  font-weight:bold;
+  margin-left: -10px;
+  padding: 5px 10px;
+  position:relative;
+  width: 88%;
+}
+
+.form-error:after {
+  content: '';
+  border-top: 37px solid transparent;
+  border-left: 20px solid $errorColor;
+  right: -20px;
+  width: 0px;
+  height: 0px;
+  top: 0px;
+  position: absolute;
+}
 
 .form-input {
   display: block;
@@ -126,6 +137,10 @@
   text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
 }
 
+.form-button.highlight{
+  background-color: $highlightColor;
+}
+
 .form-button:first-of-type{
   margin-left: -10px;
 }
@@ -143,6 +158,14 @@
   border-bottom: 39px solid transparent;
   border-right: 20px solid $primaryColor;
   left: -20px;
+}
+
+.form-button.highlight:before {
+  border-right: 20px solid $highlightColor;
+}
+
+.form-button.highlight:after {
+  border-left: 20px solid $highlightColor;
 }
 
 .form-button:after {

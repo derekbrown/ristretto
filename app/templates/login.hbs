@@ -1,11 +1,17 @@
 <section class="content">
-  <h2>
+  <h2 class="logo">
+    <div class="logo-icon">
+        <div class="top-kay"></div>
+        <div class="top-kay-point"></div>
+        <div class="bottom-kay"></div>
+        <div class="bottom-kay-point"></div>
+    </div>
     Knotis
   </h2>
 
   <form class="form-horizontal" {{action "login" on="submit"}}>
     {{#if loginFailed}}
-      <div class="alert">Invalid username or password.</div>
+      <div class="form-error">Invalid username or password.</div>
     {{/if}}
 
     <div class="form-group">
