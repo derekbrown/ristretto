@@ -13,7 +13,9 @@
 
   <form class="form-horizontal" {{action "login" on="submit"}}>
     {{#if loginFailed}}
-      <div class="form-error">Invalid username or password.</div>
+      <div class="form-error">
+        {{loginErrorMessage}}
+      </div>
     {{/if}}
 
     <div class="form-group">
@@ -32,11 +34,11 @@
     </div>
 
     <button type="submit" class="form-button" {{bindAttr disabled="isProcessing"}}>
-      Log in
+      Sign In
     </button>
 
     <button type="button" class="form-button">
-      Sign up
+      Register
     </button>
   </form>
 </section>

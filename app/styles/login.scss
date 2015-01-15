@@ -6,24 +6,11 @@
   position:relative;
 }
 
-// .content > h2:after,
-// .content > h2:before{
-//     content: '';
-//     width: 0px;
-//     height: 0px;
-//     top: 0px;
-//     position: absolute;
-// }
-// .content > h2:after {
-//     border-top: 41px solid transparent;
-//     border-left: 20px solid $accentColor;
-//     right: -20px;
-// }
-
 .form-error {
   background: $errorColor;
   font-weight:bold;
   margin-left: -10px;
+  margin-top: 15px;
   padding: 5px 10px;
   position:relative;
   width: 88%;
@@ -47,7 +34,7 @@
 .form-group {
   float: left;
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .form-text {
