@@ -21,7 +21,7 @@ export default Ember.Controller.extend({
       request = Ember.$.post("http://flatwhite.dev:9000/login", this.getProperties("username", "password"));
       request.then(
         this.loginSuccess(this.get('username')).bind(this),
-        this.loginFailure(error).bind(this)
+        this.loginFailure().bind(this)
       );
     }
   },
@@ -31,7 +31,7 @@ export default Ember.Controller.extend({
     document.location = "/messages/with/" + un;
   },
 
-  loginFailure: function(error) {
+  loginFailure: function() {
     this.reset();
     this.set("loginErrorMessage", "Invalid username or password.");
     this.set("loginFailed", true);
