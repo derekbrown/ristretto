@@ -1,0 +1,60 @@
+<section class="content signup">
+  <h2 class="logo">
+    <div class="logo-icon">
+        <div class="top-kay"></div>
+        <div class="top-kay-point"></div>
+        <div class="bottom-kay"></div>
+        <div class="bottom-kay-point"></div>
+    </div>
+    <div class="knotis-text-clip">
+      <div class="knotis-text">Knotis</div>
+    </div>
+  </h2>
+
+  <form class="form-horizontal" {{action "signup" on="submit"}}>
+    {{#if signupFailed}}
+      <div class="form-error">
+        {{signupErrorMessage}}
+      </div>
+    {{/if}}
+
+    <div class="form-group left-column">
+      <span class="form-input">
+        {{form-text class="form-text" value=username type="email" id="signupEmail" required="required"}}
+        <label class="form-label" for="signupEmail">
+          <span class="form-label-content">Email</span>
+        </label>
+      </span>
+      <span class="form-input">
+        {{form-text class="form-text" value=firstname type="text" id="signupFirstName" required="required"}}
+        <label class="form-label" for="signupFirstName">
+          <span class="form-label-content">First Name</span>
+        </label>
+      </span>
+      <span class="form-input">
+        {{form-text class="form-text" value=lastname type="text" id="signupLastName" required="required"}}
+        <label class="form-label" for="signupLastName">
+          <span class="form-label-content">Last Name</span>
+        </label>
+      </span>
+    </div>
+    <div class="form-group right-column">
+      <span class="form-input">
+        {{form-text class="form-text" value=password type="password" id="signupPassword" required="required"}}
+        <label class="form-label" for="signupPassword">
+          <span class="form-label-content">Password</span>
+        </label>
+      </span>
+      <span class="form-input">
+        {{form-text class="form-text" value=confirmPassword type="password" id="signupConfirmPassword" required="required"}}
+        <label class="form-label" for="signupConfirmPassword">
+          <span class="form-label-content">Confirm Password</span>
+        </label>
+      </span>
+    </div>
+
+    <button type="submit" class="form-button" {{bindAttr disabled="isProcessing"}}>
+      Complete Registration
+    </button>
+  </form>
+</section>

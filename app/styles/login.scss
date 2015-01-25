@@ -37,6 +37,19 @@
   margin-top: 10px;
 }
 
+.signup .form-group {
+  width: 48%;
+}
+
+.left-column {
+  float: left;
+}
+
+.right-column {
+  float: right;
+  margin-top: 60px;
+}
+
 .form-text {
   z-index: 10;
   width: 100%;
@@ -114,14 +127,19 @@
 
 .form-button{
   background: $primaryColor;
-  color: $textOnDarkPrimaryColor;
   border: none;
+  color: $textOnDarkPrimaryColor;
   display: inline-block;
   font-weight: bold;
   margin: 20px 9px 0px;
   padding: 0.3em 0.5em;
   position: relative;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
+}
+
+.signup .form-button {
+  clear: left;
+  float: left;
 }
 
 .form-button.highlight{
